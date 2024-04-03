@@ -1,4 +1,4 @@
-import { Controller, Get, Res, Render } from '@nestjs/common';
+import { Controller, Get, Render } from '@nestjs/common';
 import { AppService } from './app.service';
 
 interface HtmlController {
@@ -15,7 +15,7 @@ export class AppController {
   }
 
   @Get('index')
-  @Render('ssb')
+  @Render('ssb') //ssb 模板文件
   getIndexHtml(): HtmlController {
     return { message: 'hello ejs!' };
   }
